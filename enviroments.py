@@ -1,5 +1,6 @@
 envs = {
     "DEBUG_MODE": False,
+    "COLLISION_CHECK": False,
     
     # Infras
     "left_infra": 34,
@@ -25,5 +26,5 @@ envs = {
     "max_duty": 1023,
     
     # Velocidade
-    "speed": 40, 
+    "speed": 30, 
 }

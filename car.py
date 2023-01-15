@@ -49,6 +49,9 @@ def stop():
     right_motor.stop()
     
 def will_collide():
+    if not envs["COLLISION_CHECK"]:
+        return False
+    
     return ultra_sensor.distance_cm() < 10
     
 def adjust_to_left():
