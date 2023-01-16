@@ -1,7 +1,7 @@
 from time import sleep
 from machine import Pin, PWM
 from hcsr04 import HCSR04
-from DCMotor import DCMotor
+from motor import DCMotor
 from enviroments import envs
 
 left_infra = Pin(envs["left_infra"], Pin.IN)
