@@ -66,6 +66,9 @@ def adjust_to_right():
             break;
         right()
 
+def read_infra():
+    return left_infra.value(), center_infra.value(), right_infra.value()
+
 def display_infra():
     print(left_infra.value(), " | ", center_infra.value(), " | ", right_infra.value())
     sleep(0.5)

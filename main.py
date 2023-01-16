@@ -23,7 +23,6 @@ def connectToWifiAndUpdate():
 
 def startApp():
 	from app.main import run
-
 	run()
 
 connectToWifiAndUpdate()
