@@ -1,5 +1,5 @@
 envs = {
-    "DEBUG_MODE": False,
+    "DEBUG_MODE": True,
     "COLLISION_CHECK": False,
     
     # Infras
