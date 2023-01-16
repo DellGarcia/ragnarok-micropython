@@ -13,7 +13,7 @@ def connectToWifiAndUpdate():
         while not sta_if.isconnected():
             pass
     print('network config:', sta_if.ifconfig())
-    otaUpdater = OTAUpdater('https://github.com/DellGarcia/ragnarok-ugit', main_dir='app', secrets_file="secrets.py")
+    otaUpdater = OTAUpdater('https://github.com/DellGarcia/ragnarok-micropython', main_dir='app', secrets_file="secrets.py")
     hasUpdated = otaUpdater.install_update_if_available()
     if hasUpdated:
         machine.reset()
@@ -22,9 +22,9 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-	from app.main import start
+	from app.main import run
 
-	start()
+	run()
 
 connectToWifiAndUpdate()
 startApp()
