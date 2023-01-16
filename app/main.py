@@ -1,8 +1,9 @@
+from car import left_infra, center_infra, right_infra
+from car import will_collide, display_infra
+from car import adjust_to_left, adjust_to_right, forward, stop
+from car import DEBUG_MODE
+
 def run():
-    from car import left_infra, center_infra, right_infra
-    from car import will_collide, display_infra
-    from car import adjust_to_left, adjust_to_right, forward, stop
-    from car import DEBUG_MODE
 
     while True:
         if DEBUG_MODE:
