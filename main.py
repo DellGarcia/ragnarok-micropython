@@ -22,9 +22,11 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-	from app.main import run
+    # from app.main import run
+    # run()
+    from app.bluetooth import demo
 
-	run()
+    demo()
 
 connectToWifiAndUpdate()
 startApp()
