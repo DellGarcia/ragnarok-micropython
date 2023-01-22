@@ -1,5 +1,6 @@
 from app.fsm.state import get_arg, set_arg
 from car import read_infra, forward, stop, left, right
+from app.bluetooth import demo
 
 def set_infra_arg():
     left, center, right = read_infra()
@@ -11,7 +12,7 @@ def set_infra_arg():
 states = {
     'bluetooth_demo': {
         'phases': {
-            'actions': lambda: print("Bluetooth")
+            'actions': demo
         }
     },
     'forward': {
