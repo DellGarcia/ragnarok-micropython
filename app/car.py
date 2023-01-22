@@ -53,6 +53,9 @@ def will_collide():
         return False
     
     return ultra_sensor.distance_cm() < 10
+
+def ultra_distance_cm():
+    return ultra_sensor.distance_cm()
     
 def adjust_to_left():
     while center_infra.value() == 0:

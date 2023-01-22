@@ -1,5 +1,5 @@
 from app.fsm.state import get_arg, set_arg
-from app.car import read_infra, forward, stop, left, right
+from app.car import read_infra, forward, stop, left, right, ultra_distance_cm
 from app.bluetooth import demo
 
 def set_infra_arg():
@@ -9,17 +9,25 @@ def set_infra_arg():
     set_arg('right_on', right)
 
 
+def read_ultra():
+    set_arg('ultra_cm', ultra_distance_cm())
+
+
 states = {
     'bluetooth_demo': {
         'phases': {
-            'actions': demo
+            'actions': demo,
+            'enter': [],
+            'exit': [],
+            'transitions': []
         }
     },
     'forward': {
         'phases': {
             'actions': [
                 set_infra_arg,
-                forward
+                forward,
+                read_ultra
             ],
             'transitions': [
                 lambda: 'left' if get_arg('left_on')  == 1 else None,

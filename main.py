@@ -1,5 +1,12 @@
+from machine import Pin
+
+led = Pin(2, Pin.OUT)
+
+
 def connectToWifiAndUpdate():
     import time, machine, network, gc, app.secrets as secrets
+
+    led.value(1)
     time.sleep(1)
     print('Memory free', gc.mem_free())
 
@@ -22,8 +29,9 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-	from app.main import run
-	run()
+    from app.main import run
+    led.value(0)
+    run()
 
 connectToWifiAndUpdate()
 startApp()
