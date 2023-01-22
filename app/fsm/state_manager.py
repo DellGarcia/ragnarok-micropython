@@ -1,8 +1,5 @@
-from collections import deque
-
-
 states = dict()
-previous_states = deque()
+previous_states = list()
 
 
 def set_states(beginning_stages):
@@ -24,4 +21,4 @@ def append_state(state: str):
     previous_states.append(state)
 
     if len(previous_states) > 5:
-        previous_states.popleft()
+        previous_states.pop(0)
