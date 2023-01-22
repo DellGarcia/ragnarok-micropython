@@ -1,4 +1,4 @@
-from fsm.machine import init, execute_machine
+from app.fsm.machine import init, execute_machine
 from app.car_states import states
 
 

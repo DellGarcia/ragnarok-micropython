@@ -1,4 +1,4 @@
-from fsm.state import get_arg, set_arg
+from app.fsm.state import get_arg, set_arg
 from car import read_infra, forward, stop, left, right
 
 def set_infra_arg():

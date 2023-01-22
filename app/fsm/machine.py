@@ -1,5 +1,5 @@
-from fsm.state_manager import set_states
-from fsm.state import execute_state, transition_to_next_state
+from app.fsm.state_manager import set_states
+from app.fsm.state import execute_state, transition_to_next_state
 
 
 def init(states, first_state):

@@ -1,4 +1,4 @@
-from fsm.state_manager import current_state, append_state
+from app.fsm.state_manager import current_state, append_state
 
 
 def execute_state():
