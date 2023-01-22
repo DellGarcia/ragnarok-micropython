@@ -1,6 +1,9 @@
 envs = {
     "DEBUG_MODE": False,
     "COLLISION_CHECK": False,
+
+    # FSM
+    "INITIAL_STATE": "bluetooth_demo",
     
     # Infras
     "left_infra": 34,

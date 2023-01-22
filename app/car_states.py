@@ -9,6 +9,11 @@ def set_infra_arg():
 
 
 states = {
+    'bluetooth_demo': {
+        'phases': {
+            'actions': lambda: print("Bluetooth")
+        }
+    },
     'forward': {
         'phases': {
             'actions': [
