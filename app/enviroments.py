@@ -3,7 +3,7 @@ envs = {
     "COLLISION_CHECK": False,
 
     # FSM
-    "INITIAL_STATE": "bluetooth_demo",
+    "INITIAL_STATE": "forward",
     
     # Infras
     "left_infra": 34,
