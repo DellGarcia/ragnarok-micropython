@@ -34,7 +34,7 @@ class OTAUpdater:
         """
 
         (current_version, latest_version) = self._check_for_new_version()
-        if latest_version > current_version:
+        if latest_version != current_version:
             print('New version available, will download and install on next reboot')
             self._create_new_version_file(latest_version)
             return True
@@ -75,7 +75,7 @@ class OTAUpdater:
         """
 
         (current_version, latest_version) = self._check_for_new_version()
-        if latest_version > current_version:
+        if latest_version != current_version:
             print('Updating to version {}...'.format(latest_version))
             self._create_new_version_file(latest_version)
             self._download_new_version(latest_version)
