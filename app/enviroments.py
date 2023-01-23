@@ -1,33 +1,32 @@
 envs = {
-    "DEBUG_MODE": False,
-    "COLLISION_CHECK": False,
+    'DEBUG_MODE': False,
+    'COLLISION_CHECK': False,
 
-    # FSM
-    "INITIAL_STATE": "forward",
-    
-    # Infras
-    "left_infra": 34,
-    "center_infra": 35,
-    "right_infra": 19,
+    # Finite State Machine
+    'INITIAL_STATE': 'forward',
 
-    # Ultra
-    "ultra_trigger": 13,
-    "ultra_echo": 12,
+    # Infrareds
+    'left_infra': 34,
+    'center_infra': 35,
+    'right_infra': 19,
 
-    # Rodas
-    "frequency": 1000,
-    
-    "left_pin1": 5,
-    "left_pin2": 18,
-    "left_enable": 32,
-    
-    "right_pin1": 16,
-    "right_pin2": 17,
-    "right_enable": 33,
-    
-    "min_duty": 400,
-    "max_duty": 1023,
-    
-    # Velocidade
-    "speed": 30, 
+    # Ultrasonic
+    'ultra_trigger': 13,
+    'ultra_echo': 12,
+
+    # Wheels
+    'frequency': 1000,
+
+    'left_pin1': 5,
+    'left_pin2': 18,
+    'left_enable_pin': 32,
+
+    'right_pin1': 16,
+    'right_pin2': 17,
+    'right_enable_pin': 33,
+
+    'min_duty': 400,
+    'max_duty': 1023,
+
+    'speed': 30,
 }

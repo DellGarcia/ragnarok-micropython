@@ -7,15 +7,15 @@ def execute_state():
 
 
 def execute_phase(phase_name):
-    for function in get_current_phase(phase_name):
-        function()
+    for phase in get_phase(phase_name):
+        phase()
 
 def execute_transitions():
-    for transition in get_current_phase('transitions'):
+    for transition in get_phase('transitions'):
         transition_to_next_state(transition())
 
 
-def get_current_phase(phase_name, default_return=()):
+def get_phase(phase_name, default_return=()):
     try:
         return current_state()['phases'][phase_name]
     except (KeyError, IndexError):

@@ -14,13 +14,13 @@ def connectToWifiAndUpdate():
 
     sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
-        print('connecting to network...')
+        print('Connecting to network...')
         sta_if.active(True)
         sta_if.connect(secrets.WIFI_SSID, secrets.WIFI_PASSWORD)
         while not sta_if.isconnected():
             pass
-    print('network config:', sta_if.ifconfig())
-    otaUpdater = OTAUpdater('https://github.com/DellGarcia/ragnarok-micropython', main_dir='app', secrets_file="secrets.py")
+    print('Network config: ', sta_if.ifconfig())
+    otaUpdater = OTAUpdater('https://github.com/DellGarcia/ragnarok-micropython', main_dir='app', secrets_file='secrets.py')
     hasUpdated = otaUpdater.install_update_if_available()
     if hasUpdated:
         machine.reset()

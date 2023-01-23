@@ -1,10 +1,12 @@
+from collections import deque
+
 states = dict()
-previous_states = list()
+previous_states = deque((), 5)
 
 
 def set_states(beginning_stages):
-    states.update(beginning_stages)
-    setup_states()
+    global states
+    states = beginning_stages
 
 
 def setup_states():
@@ -21,6 +23,3 @@ def current_state():
 
 def append_state(state: str):
     previous_states.append(state)
-
-    if len(previous_states) > 5:
-        previous_states.pop(0)
