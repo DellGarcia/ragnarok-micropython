@@ -1,11 +1,8 @@
-from collections import deque
-
 states = dict()
-previous_states = deque((), 5)
+__state = None
 
 
 def set_states(beginning_stages):
-    global states
     states = beginning_stages
 
 
@@ -18,8 +15,7 @@ def setup_states():
 
 
 def current_state():
-    return states[previous_states[-1]]
-
+    return states[__state]
 
 def append_state(state: str):
-    previous_states.append(state)
+    __state = state
