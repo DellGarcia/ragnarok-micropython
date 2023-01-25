@@ -3,6 +3,7 @@ __state = None
 
 
 def set_states(beginning_stages):
+    global states
     states = beginning_stages
 
 
@@ -18,4 +19,5 @@ def current_state():
     return states[__state]
 
 def append_state(state: str):
+    global __state
     __state = state
