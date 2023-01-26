@@ -2,16 +2,17 @@
 from app.car.wheels import forward, stop, left, right
 from app.car.infrareds import set_infras_arg, has_activated
 from app.car.ultrasonic import set_ultra_arg
-from app.bluetooth import demo
+from app.ble.bluetooth import demo
 from app.fsm.state import get_arg
+from app.ble.flutter_app import exec_command, init, close
 
 
 states = {
-    'bluetooth_demo': {
+    'ble_flutter': {
         'phases': {
-            'actions': [
-                demo
-            ],
+            'enter': init,
+            'actions': exec_command,
+            'exit': close
         }
     },
     'forward': {

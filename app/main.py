@@ -4,7 +4,7 @@ from app.enviroments import envs
 
 
 def run():
-    init(states, envs["INITIAL_STATE"])
+    init(states, envs['INITIAL_STATE'])
 
     while True:
         execute_machine()
