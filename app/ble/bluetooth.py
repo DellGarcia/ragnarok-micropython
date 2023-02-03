@@ -13,9 +13,9 @@ _IRQ_GATTS_WRITE = const(3)
 _FLAG_WRITE = const(0x0008)
 _FLAG_NOTIFY = const(0x0010)
 
-_UART_UUID = bluetooth.UUID('dd17e794-3b63-4548-9e9c-94eb2ed7bfee')
-_UART_TX = (bluetooth.UUID('2e705a53-4a16-46bb-9c31-0ce91f152f43'), _FLAG_NOTIFY,)
-_UART_RX = (bluetooth.UUID('c85b3aac-29a0-4467-9647-b18344086a86'), _FLAG_WRITE,)
+_UART_UUID = bluetooth.UUID('6E400001-B5A3-F393-E0A9-E50E24DCCA9E')
+_UART_TX = (bluetooth.UUID('6E400002-B5A3-F393-E0A9-E50E24DCCA9E'), _FLAG_NOTIFY,)
+_UART_RX = (bluetooth.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E'), _FLAG_WRITE,)
 _UART_SERVICE = (_UART_UUID, (_UART_TX, _UART_RX),)
 
 # org.bluetooth.characteristic.gap.appearance.xml
