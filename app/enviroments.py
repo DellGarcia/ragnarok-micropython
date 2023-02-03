@@ -7,6 +7,9 @@ envs = {
     # Finite State Machine
     'INITIAL_STATE': possible_states[0],
 
+    # Bluetooth Options
+    'BLUETOOTH_NAME': 'ragnarok',
+
     # Infrareds
     'left_infra': 34,
     'center_infra': 35,

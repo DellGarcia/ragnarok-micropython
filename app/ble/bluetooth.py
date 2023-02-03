@@ -4,6 +4,7 @@ import bluetooth
 from micropython import const
 
 from app.ble.ble_advertising import advertising_payload
+from app.enviroments import envs
 
 
 _IRQ_CENTRAL_CONNECT = const(1)
@@ -23,7 +24,7 @@ _ADV_APPEARANCE_GENERIC_COMPUTER = const(128)
 
 
 class BLEUART:
-    def __init__(self, ble, name='mpy-uart', rxbuf=100):
+    def __init__(self, ble, name=envs['BLUETOOTH_NAME'], rxbuf=100):
         self._ble = ble
         self._ble.active(True)
         self._ble.irq(self._irq)
