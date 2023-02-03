@@ -1,9 +1,11 @@
+possible_states = ['forward', 'ble_flutter']
+
 envs = {
     'DEBUG_MODE': False,
     'COLLISION_CHECK': False,
 
     # Finite State Machine
-    'INITIAL_STATE': 'forward',
+    'INITIAL_STATE': possible_states[0],
 
     # Infrareds
     'left_infra': 34,
