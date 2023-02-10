@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#" target="blank">
     <!--<img src="https://camo.githubusercontent.com/c8ea1110aab43014bb8d5f86c84f82881f9847f2ea92a6ca6c7e511d06d7339c/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3733353030382f313834353232392f37373338666530612d373537392d313165332d383466342d3762313261613462323939622e706e67" width="250" alt="MicroPython" />-->
-    <img src="https://user-images.githubusercontent.com/49599535/217877950-45471c18-cbb8-4772-8c46-fd1ecfa6a13a.png" width="800" alt="Ragnarok" />
+    <img src="https://user-images.githubusercontent.com/49599535/217877950-45471c18-cbb8-4772-8c46-fd1ecfa6a13a.png" width="600" alt="Ragnarok" />
   </a>
 </p>
 
@@ -47,7 +47,8 @@ For the use of the project, some prerequisites will be necessary.
     - [x] Finite State Machine
 - [ ] Bluetooth Module
     - [ ] Control via DualSense
-    - [ ] Control via Flutter app
+    - [x] Control via Flutter app
+- [ ] Apply PID
 
 
 ## Acknowledgments
