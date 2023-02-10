@@ -19,11 +19,13 @@ def display_infra():
     print(infras['left'].value(), ' | ', infras['center'].value() , ' | ', infras['right'].value())
 
 def has_activated(name):
-    return get_arg(name + '_on') == 1
+    return get_arg('infras')[name] == 1
 
 def set_infras_arg():
-    left_on, center_on, right_on = read_infras()
-    
-    set_arg('left_on', left_on)
-    set_arg('center_on', center_on)
-    set_arg('right_on', right_on)
+    left, center, right = read_infras()
+
+    set_arg('infras', {
+        'left': left,
+        'center': center,
+        'right': right
+    })

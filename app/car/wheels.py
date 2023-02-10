@@ -2,6 +2,7 @@ from machine import Pin, PWM
 from app.enviroments import envs
 from app.car.motor import DCMotor
 
+
 wheels = {
     'left': None,
     'right': None
@@ -24,21 +25,30 @@ left_wheel = wheels['left']
 right_wheel = wheels['right']
 
 
+def set_wheels_speed(left_speed, right_speed):
+    left_wheel.set_duty(int(left_speed))
+    right_wheel.set_duty(int(right_speed))
+
+
 def left():
     left_wheel.forward(speed)
     right_wheel.backwards(speed)
+
 
 def right():
     right_wheel.forward(speed)
     left_wheel.backwards(speed)
 
+
 def forward():
     left_wheel.forward(speed)
     right_wheel.forward(speed)
 
+
 def backward():
     left_wheel.backwards(back_speed)
     right_wheel.backwards(back_speed)
+
 
 def stop():
     left_wheel.stop()

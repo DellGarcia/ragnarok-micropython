@@ -5,6 +5,7 @@ from app.car.ultrasonic import set_ultra_arg
 from app.ble.bluetooth import demo
 from app.fsm.state import get_arg
 from app.ble.flutter_app import exec_command, init, close
+from app.car.pid import adjust_motor_speed, init_pid
 
 
 states = {
@@ -13,6 +14,22 @@ states = {
             'enter': init,
             'actions': exec_command,
             'exit': close
+        }
+    },
+    'pid': {
+        'phases': {
+            'enter': [
+                init_pid
+            ],
+            'actions': [
+                set_infras_arg,
+                adjust_motor_speed
+            ]
+        }
+    },
+    'bang-bang': {
+        'phases': {
+            'transitions': lambda: 'forward'
         }
     },
     'forward': {

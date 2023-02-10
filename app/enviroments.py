@@ -1,4 +1,4 @@
-possible_states = ['forward', 'ble_flutter']
+possible_states = ['bang-bang', 'pid', 'ble_flutter']
 
 envs = {
     'DEBUG_MODE': False,
@@ -34,4 +34,10 @@ envs = {
     'max_duty': 1023,
 
     'speed': 30,
+
+    # PID
+    'KP': 1.0,
+    'KI': 0.1,
+    'KD': 0.5,
+    'LIMIT': 50
 }
