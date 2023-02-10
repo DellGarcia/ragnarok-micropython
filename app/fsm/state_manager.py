@@ -3,7 +3,7 @@ current_state_name = None
 
 
 def set_states(beginning_stages):
-    global states, states_names
+    global states
     states = beginning_stages
 
 
