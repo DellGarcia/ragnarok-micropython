@@ -27,11 +27,6 @@ states = {
             ]
         }
     },
-    'bang-bang': {
-        'phases': {
-            'transitions': lambda: 'forward'
-        }
-    },
     'forward': {
         'phases': {
             'actions': [
