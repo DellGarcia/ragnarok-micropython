@@ -1,5 +1,5 @@
 from app.fsm.state_manager import set_states, setup_states
-from app.fsm.state import execute_state, transition_to_next_state
+from app.fsm.state import execute_current_state, transition_to_next_state
 
 
 def init(states, first_state):
@@ -10,4 +10,4 @@ def init(states, first_state):
 
 
 def execute_machine():
-    execute_state()
+    execute_current_state()

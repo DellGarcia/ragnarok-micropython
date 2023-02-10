@@ -1,9 +1,9 @@
 states = dict()
-__state = None
+current_state_name = None
 
 
 def set_states(beginning_stages):
-    global states
+    global states, states_names
     states = beginning_stages
 
 
@@ -16,8 +16,13 @@ def setup_states():
 
 
 def current_state():
-    return states[__state]
+    try:
+        return states[current_state_name]
+    except (IndexError, KeyError) as err:
+        print('Invalid state name!')
+        raise err
 
-def append_state(state: str):
-    global __state
-    __state = state
+
+def override_state(next_state_name: str):
+    global current_state_name
+    current_state_name = next_state_name
