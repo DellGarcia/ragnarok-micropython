@@ -27,7 +27,7 @@ def close():
 
 
 def on_rx():
-    command = get_arg('uart').read().decode().strip()
+    command = get_arg('uart').read().decode().strip().upper()
 
     if command in commands:
         set_arg('current_command', command)
