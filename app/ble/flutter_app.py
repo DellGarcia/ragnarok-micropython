@@ -1,7 +1,7 @@
 import bluetooth
 
 from app.ble.bluetooth import BLEUART
-from app.car.wheels import forward, backward, left, right, stop
+from app.car.wheels import forward, backward, left, right, stop, config_speed
 from app.fsm.state import get_arg, set_arg
 
 
@@ -17,6 +17,8 @@ commands = {
 def init():
     uart = BLEUART(bluetooth.BLE())
     uart.irq(handler=on_rx)
+
+    config_speed(40, 40)
 
     set_arg('uart', uart)
     set_arg('current_command', 'ST')

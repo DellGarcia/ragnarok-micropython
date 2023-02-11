@@ -24,6 +24,11 @@ left_wheel = wheels['left']
 right_wheel = wheels['right']
 
 
+def config_speed(s, bs):
+    global speed, back_speed
+    speed = s
+    back_speed = bs
+
 def left():
     left_wheel.forward(speed)
     right_wheel.backwards(speed)
