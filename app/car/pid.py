@@ -1,7 +1,7 @@
 from time import ticks_ms, ticks_diff
 
 from app.fsm.state import get_arg, set_arg
-from app.car.wheels import set_wheels_speed
+from app.car.wheels import set_wheels_speed, forward
 from app.enviroments import envs
 
 
@@ -15,6 +15,8 @@ def init_pid():
     set_arg('previous_time', ticks_ms())
     set_arg('previous_error', 0)
     set_arg('integral', 0)
+    
+    forward()
 
 
 def get_ir_values():
@@ -71,4 +73,4 @@ def calc_correction():
 
 def adjust_motor_speed():
     correction = calc_correction()
-    set_wheels_speed(LIMIT - correction, LIMIT + correction)
+    set_wheels_speed(LIMIT + correction, LIMIT - correction)

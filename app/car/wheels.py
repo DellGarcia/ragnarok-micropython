@@ -26,9 +26,7 @@ right_wheel = wheels['right']
 
 
 def set_wheels_speed(left_speed, right_speed):
-    left_wheel.set_duty(int(left_speed))
-    right_wheel.set_duty(int(right_speed))
-
+    forward(left_speed=left_speed, right_speed=right_speed)
 
 def left():
     left_wheel.forward(speed)
@@ -40,9 +38,9 @@ def right():
     left_wheel.backwards(speed)
 
 
-def forward():
-    left_wheel.forward(speed)
-    right_wheel.forward(speed)
+def forward(left_speed=speed, right_speed=speed):
+    left_wheel.forward(left_speed)
+    right_wheel.forward(right_speed)
 
 
 def backward():
