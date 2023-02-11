@@ -1,13 +1,13 @@
 import bluetooth
 
 from app.ble.bluetooth import BLEUART
-from app.car.wheels import forward, backward, left, right, stop, config_speed
+from app.car.wheels import forward, backwards, left, right, stop, config_speed
 from app.fsm.state import get_arg, set_arg
 
 
 commands = {
     'FW': forward,
-    'BW': backward,
+    'BW': backwards,
     'LT': left,
     'RT': right,
     'ST': stop,

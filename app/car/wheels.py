@@ -41,7 +41,7 @@ def forward():
     left_wheel.forward(speed)
     right_wheel.forward(speed)
 
-def backward():
+def backwards():
     left_wheel.backwards(back_speed)
     right_wheel.backwards(back_speed)
 
